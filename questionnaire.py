@@ -6,7 +6,7 @@ import jetson.utils
 import time
 
 net = jetson.inference.detectNet("ssd-mobilenet-v2", threshold=0.5)
-camera = jetson.utils.videoSource("/dev/video0")
+camera = jetson.utils.videoSource("/dev/video0") # "csi://0" for MIPI CSI camera
 display = jetson.utils.videoOutput("display://0")
 
 while display.IsStreaming():
@@ -15,6 +15,8 @@ while display.IsStreaming():
 	display.Render(img)
 	display.SetStatus("Object Detection | Network {:.0f} FPPS".format(net.GetNetworkFPS()))
 	time.sleep(2)
+
+	# deploys questionnaire when person is detected in detection
 	for detection in detections:
 		if net.GetClassDesc(detection.ClassID) == "person":
 			running = True
