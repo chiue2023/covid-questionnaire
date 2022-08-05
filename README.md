@@ -23,3 +23,5 @@ Directions:
 7. Create a directory in your home folder using "mkdir <directory name>"
 8. Either use the nano command to create a file and copy and paste the code in or download questionnaire.py on your computer and upload it to the jetson directory using "scp <from> <to>"
 9. Run the program in the directory you created using "python3 questionnaire.py"
+
+[View a video explanation here](https://youtu.be/wZePneHsl8M)
