@@ -1,7 +1,7 @@
 # Covid Questionnaire
 The COVID-19 Questionnaire deploys when a person is detected by a camera. Its purpose is to serve as an automated reminder about the current COVID-19 quarantine and isolation guidelines.
 
-![Program being run](https://imgur.com/a/LeTv040)
+![Program being run]([Imgur](https://i.imgur.com/sWf93rR.png?1))
 
 ## The Algorithm
 This code uses the Jetson Detectnet SSD-Mobilenet-v2 detection model in order to identify objects (in this case a person) in the camera frame. It then assigns the identified object to a class in a specified set (in the case of Mobilenet-v2 one of the 91 COCO classes).
